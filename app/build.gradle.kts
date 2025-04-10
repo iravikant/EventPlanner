@@ -46,30 +46,26 @@ android {
 }
 
 dependencies {
-    // Core AndroidX
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation (libs.material.v180)
 
-    // Unit Testing
     testImplementation(libs.junit)
 
-    // Instrumented Testing
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
     kapt("androidx.room:room-compiler:2.6.1")
-    // ✅ Room (Database)
     implementation("androidx.room:room-runtime:2.6.1")
-    implementation("androidx.room:room-ktx:2.6.1")// Optional but useful for coroutines
+    implementation("androidx.room:room-ktx:2.6.1")
 
-    // ✅ Lifecycle & ViewModel
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.1")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.8.1")
 
-    // UI Extras
     implementation("androidx.recyclerview:recyclerview:1.4.0")
-    implementation("com.prolificinteractive:material-calendarview:1.4.3") // Optional custom calendar
+    implementation("com.prolificinteractive:material-calendarview:1.4.3")
+
 }
